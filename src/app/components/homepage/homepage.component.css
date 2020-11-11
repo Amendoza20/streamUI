@@ -1,0 +1,38 @@
+  
+@media screen and (max-width: 600px) {
+    .card {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+}
+.card{
+    margin-top: 150px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 50px;
+    width: 275px;
+    height: 300px;
+    top: 175px;
+
+    position: relative;
+
+    background: #293e44;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    
+}
+
+.button{
+    bottom: 20px;
+    margin-top: 50px;
+    width: auto; 
+    background-color: whitesmoke;
+    color: rgb(33, 181, 240);
+    font-size: 20px;
+}
+
+.button:hover {
+    background-color: rgb(33, 181, 240);
+    color: whitesmoke;
+}

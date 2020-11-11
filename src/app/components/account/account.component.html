@@ -1,0 +1,22 @@
+<p>account works!</p>
+<div class="col-md-6">
+    <h2> User Details</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+              <th>Username</th>
+              <th>FirstName</th>
+              <th>LastName</th>
+              <th>EmailAddress</th>
+            </tr>
+          </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+              <td><span class="badge">{{user.Username}}</span> {{user.username}}</td>
+              <td><span class="badge">{{user.FirstName}}</span> {{user.firstName}}</td>
+              <td><span class="badge">{{user.LastName}}</span> {{user.lastName}}</td>
+              <td><span class="badge">{{user.EmailAddress}}</span> {{user.emailAddress}}</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>

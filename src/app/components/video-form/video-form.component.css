@@ -1,0 +1,40 @@
+@media screen and (max-width: 600px) {
+    .card {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+}
+.card{
+    margin-top: 100px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 75px;
+    width: 400px;
+    height: 500px;
+    top: 100px;
+
+    position: relative;
+
+    background: #293e44;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    
+}
+.video-form {
+    width: 45%;
+    height: 25px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.button{
+    margin: 10px;
+    color: rgb(33, 181, 240);
+    font-size: 20px;
+    
+}
+.button:hover {
+    
+        background-color: rgb(33, 181, 240);
+        color: whitesmoke ;
+}

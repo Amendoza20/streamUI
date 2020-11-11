@@ -1,0 +1,24 @@
+  <div class="Hello">
+  <h1 class="user">Hello, {{currentUsername}}! </h1>
+  </div>
+  <br><br> 
+    <div class="column">
+      <div class="card">
+        <h2> Videostream</h2>
+            <table class="table table-striped">
+                <tbody>
+                  <tr *ngFor="let video of videos">
+                    <td><span class="badge">{{video.videoName}}</span></td>
+                  </tr>
+                  </tbody>
+                  <br>
+                  <button class="button" routerLink="upload">New Video</button>
+                  <div class="search">
+                    <h2 class="title"> Stream video: Enter Video Name Here</h2>
+                    <input [(ngModel)]="videoName"/>
+                    <button class="btn btn-lg btn-primary" (click)="search()">Go!</button>
+                  </div>
+              </table>
+      </div>
+  </div>
+    
