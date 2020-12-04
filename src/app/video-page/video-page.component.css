@@ -1,0 +1,21 @@
+
+.card-title{
+    margin-left: 300px;
+    margin-right: 300px;
+    text-align: center;
+    color:whitesmoke
+    
+}
+
+.card{
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-top: 50px;
+    margin-bottom: 70px;
+    position: center;
+    background-color: #293e44;
+    
+}
+.description{
+    color: whitesmoke;
+}

@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Video } from '../models/video';
 import { VideoService } from '../services/video-service';
+import { CommentService } from '../services/comment-service';
 
 @Component({
   selector: 'app-video-page',
@@ -13,6 +14,7 @@ export class VideoPageComponent implements OnInit {
   @Input()
   video: Video;
   videoName: string;
+  comment: Comment;
   constructor(private videoService: VideoService, private route: ActivatedRoute) {}
 
   ngOnInit(){
@@ -23,4 +25,7 @@ export class VideoPageComponent implements OnInit {
   getVideo(){
     this.videoService.getVideo(this.videoName).subscribe(video => this.video = video);
   }
+  
+  
+
 }

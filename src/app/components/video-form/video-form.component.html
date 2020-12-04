@@ -1,10 +1,10 @@
 <div class="card">
     <form class="video-form" (ngSubmit)="onSubmit()" #videoForm="ngForm">
-        <label for="name" style="color:white">Video Title</label>
+        <label for="name">Video Title</label>
         <input type="text" [(ngModel)]="video.videoName"
             class="form-control" id="name" name="name" placeholder="Enter Video Title:"
             required>
-        <label for="description" style="color:white">Video Description </label>
+        <label for="description">Video Description </label>
         <textarea type="text" [(ngModel)]="video.videoDescription"
             class="form-control" id="description" name="description" rows="6"
             placeholder="Please enter description of video"
