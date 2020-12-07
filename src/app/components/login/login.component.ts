@@ -31,7 +31,9 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(): boolean{
-    this.login.username = this.loginForm.get('username').value;
+    if (this.login.username != null){
+      this.login.username = this.loginForm.get('username').value;
+    }
     this.login.password = this.loginForm.get('password').value;
     this.userService.login(this.login.username, this.login.password);
     this.router.navigateByUrl('/home')
@@ -46,14 +48,6 @@ export class LoginComponent implements OnInit {
 
 
 
-  //   this.userService.login(this.login).subscribe(data => {
-  //     if (data) {
-  //       console.log('login success');
-  //       this.router.navigateByUrl('/homepage');
-  //     } else {
-  //       console.log('Login failed');
-  //     }
-  //   });
-  // }
+
 
 }

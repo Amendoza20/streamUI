@@ -3,24 +3,31 @@
   <form class="new-user" [formGroup]="signupForm" (ngSubmit)="onSubmit()">
        <h1>Create New User</h1>
        <br>
+
        <label for="fname">First Name: </label>
-       <input type="text" id="firstName" formControlName="firstName" placeholder="Enter first name..." required="" autofocus="">
+       <input type="text" id="firstName" formControlName="firstName" placeholder="Enter first name..." autofocus="">
        <br>
+
        <label for="lname">Last Name: </label>
        <input type="text" id="lastName" formControlName="lastName" placeholder="Enter last name..." required="" >
        <br>
+
        <label for="username">Username: </label>
        <input type="text" id="username" formControlName="username" required="" >
        <br>
+
        <label for="email">Email Address: </label>
        <input type="text" id="email" formControlName="email" required="" >
        <br>
+
        <label for="email">Re-enter Email: </label>
        <input type="text" id="ConfirmEmail" formControlName="confirmEmail" required="">
        <br>
+
        <label for="newpassword">Enter Password: </label>
        <input type="password" id="password" formControlName="password" required="">
        <br>
+
        <label for="newpassword">Confirm Password: </label>
        <input type="password" id="ConfirmPassword" formControlName="confirmPassword" required="">
        <br>
