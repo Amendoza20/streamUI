@@ -37,10 +37,15 @@ export class SignUpComponent implements OnInit {
   ngOnInit(): void {
   }
   passwordValidation(){
-    const password = this.signupForm.get('password');
-    const confirmPassword = this.signupForm.get('confirmpassword');
-    if(!password || !confirmPassword) {return null;}
-    if(password.value === confirmPassword.value) {
+    const password = this.signupForm.get('password').value;
+    //console.log(this.signupForm.get('password').value);
+    const confirmPassword = this.signupForm.get('confirmPassword').value;
+    //console.log(this.signupForm.get('confirmPassword').value);
+    if(!password || !confirmPassword) {
+      console.log("pass error")
+      return null;}
+    if(password === confirmPassword) {
+      console.log("password clear")
       return true;
     }
     
@@ -56,11 +61,15 @@ export class SignUpComponent implements OnInit {
 }
 
   emailValidation(){
-    const email = this.signupForm.get('email');
-    const confirmEmail = this.signupForm.get('confirmemail');
-    if (!email || !confirmEmail) {return null}
-    if (email.value === confirmEmail.value) { 
-      return true}
+    const email = this.signupForm.get('email').value;
+    const confirmEmail = this.signupForm.get('confirmEmail').value;
+    if (!email || !confirmEmail) {
+      console.log("email error")
+      return null}
+    if (email === confirmEmail) { 
+      console.log("email clear")
+      return true;
+    }
   
     //   if (this.signupForm.get(email) != null){
   //   console.log(this.signupForm.get(email));
@@ -74,19 +83,26 @@ export class SignUpComponent implements OnInit {
     
 
   onSubmit(){
-    if (this.signupForm.dirty && this.signupForm.valid){
-      console.log("validation dirty");
-    }
-    console.log("or here- first");
+    //verification that form is completed
+
+    console.log("here - first");
     if (!this.passwordValidation() && !this.emailValidation()) {
     console.log("validation fails");
     }
+    console.log("here - second")
+    if ( this.passwordValidation() && this.emailValidation()) {
+      console.log ("validation passes")
+    }
+
+    //setting payload for User creation of BE
+
     this.payLoad.username = this.signupForm.get('username').value;
     this.payLoad.firstName = this.signupForm.get('firstName').value;
     this.payLoad.lastName = this.signupForm.get('lastName').value;
     this.payLoad.emailAddress = this.signupForm.get('email').value;
     this.payLoad.password = this.signupForm.get('password').value;
     
+    //sending User to the BR
 
     this.userService.signUp(this.payLoad).subscribe(data => {
       console.log('User created');
@@ -97,6 +113,6 @@ export class SignUpComponent implements OnInit {
       console.log('register failed'); 
     
     });
-  //}else(alert("Opps Something Went Wrong!"));
+ 
   }
 }
