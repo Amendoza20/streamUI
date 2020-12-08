@@ -38,9 +38,7 @@ export class SignUpComponent implements OnInit {
   }
   passwordValidation(){
     const password = this.signupForm.get('password').value;
-    //console.log(this.signupForm.get('password').value);
     const confirmPassword = this.signupForm.get('confirmPassword').value;
-    //console.log(this.signupForm.get('confirmPassword').value);
     if(!password || !confirmPassword) {
       console.log("pass error")
       return null;}
@@ -48,17 +46,7 @@ export class SignUpComponent implements OnInit {
       console.log("password clear")
       return true;
     }
-    
-
-    // if (this.signupForm.get(signup.password) != 'password') {
-    //   var password = this.signupForm.get('password').value;
-
-    //   var confirmPassword = this.signupForm.get('confirmPassword').value;
-    //   return password === confirmPassword;
-    // }
-    // return null;
-  
-}
+  }
 
   emailValidation(){
     const email = this.signupForm.get('email').value;
@@ -69,16 +57,7 @@ export class SignUpComponent implements OnInit {
     if (email === confirmEmail) { 
       console.log("email clear")
       return true;
-    }
-  
-    //   if (this.signupForm.get(email) != null){
-  //   console.log(this.signupForm.get(email));
-  //   var email = this.signupForm.get('email').value;
-  //   var confirmEmail = this.signupForm.get('confirmEmail').value;
-  //   return email === confirmEmail;
-  //   }
-  //   return "error";
-    
+    }        
   }
     
 
